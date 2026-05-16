@@ -1,0 +1,226 @@
+/* ==========================================================
+   WDD 131 – Dynamic Web Fundamentals
+   Hoja de estilos base
+   ========================================================== */
+
+:root {
+    --color-primary: #1f3a5f;       /* Azul profundo */
+    --color-accent: #d97706;        /* Ámbar cálido */
+    --color-bg: #f7f5f0;            /* Beige claro */
+    --color-surface: #ffffff;
+    --color-text: #1a1a1a;
+    --color-muted: #555555;
+    --color-border: #e2dfd8;
+
+    --font-display: "Outfit", system-ui, sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+
+    --radius: 10px;
+    --shadow-sm: 0 2px 6px rgba(31, 58, 95, 0.08);
+    --shadow-md: 0 6px 18px rgba(31, 58, 95, 0.12);
+
+    --max-width: 960px;
+}
+
+/* ---------- Reset ligero ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    color: var(--color-primary);
+    line-height: 1.2;
+    margin: 0 0 0.5rem 0;
+}
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+header {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: 1.5rem 1rem 0;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+#course-title {
+    display: block;            /* Requerido por la asignación */
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    padding-bottom: 1rem;
+}
+
+/* ---------- Navegación con Flex ---------- */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+nav a {
+    flex: 1 1 auto;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-surface);
+    font-weight: 500;
+    padding: 0.85rem 1.25rem;
+    border-radius: var(--radius) var(--radius) 0 0;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    position: relative;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--color-accent);
+    color: #fff;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+nav a:focus-visible {
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.4);
+}
+
+/* ==========================================================
+   MAIN
+   ========================================================== */
+main {
+    max-width: var(--max-width);
+    margin: 2.5rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+main h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-accent);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+}
+
+/* ---------- Cards con CSS Grid ---------- */
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    margin-bottom: 1.75rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.card img {
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    background-color: #eef2f7;
+}
+
+.card p {
+    margin: 0;
+    color: var(--color-muted);
+    font-size: 1rem;
+}
+
+/* Grid de dos columnas para pantallas medianas en adelante */
+@media (min-width: 640px) {
+    .card {
+        grid-template-columns: minmax(180px, 240px) 1fr;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .card h2 {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+#lastModified {
+    color: #c9d6e2;
+    font-style: italic;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================
+   Pantallas muy pequeñas
+   ========================================================== */
+@media (max-width: 480px) {
+    #course-title {
+        font-size: 1.1rem;
+    }
+
+    nav a {
+        flex: 1 1 45%;
+        padding: 0.7rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+}
