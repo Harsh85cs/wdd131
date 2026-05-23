@@ -1,0 +1,51 @@
+/* ================================
+   temples-large.css – Larger View
+   Media query: 768px y más
+   ================================ */
+
+@media (min-width: 768px) {
+
+  /* ---------- HEADER ---------- */
+  header {
+    flex-wrap: nowrap;
+    padding: 1.2rem 2rem;
+  }
+
+  /* ---------- HAMBURGER – oculto en pantallas grandes ---------- */
+  #hamburger {
+    display: none;
+  }
+
+  /* ---------- NAV – siempre visible en pantallas grandes ---------- */
+  #main-nav {
+    display: block !important;   /* sobreescribe el display:none del mobile */
+    width: auto;
+  }
+
+  #main-nav ul {
+    flex-direction: row;
+    gap: 0.25rem;
+  }
+
+  #main-nav ul li a {
+    border-top: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+  }
+
+  /* ---------- GALLERY – múltiples columnas ---------- */
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  /* ---------- MAIN – ancho limitado y centrado ---------- */
+  main {
+    padding: 2.5rem 2rem;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+}

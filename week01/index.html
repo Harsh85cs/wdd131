@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Abraham Lopez</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Página principal del curso de Abraham Castillo, estudiante de Software Development en BYU-Idaho. Contiene información personal, proyectos, HTML, CSS y JavaScript.">
+    <meta name="author" content="Abraham Lopez">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="www.linkedin.com/in/abraham-lópez-pérez-139310212" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank" rel="noopener">Escritura</a>
+            <a href="#" aria-label="Proyecto final (próximamente)">Proyecto Final</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Abraham Lopez</h1>
+
+        <section class="card">
+            <h2>Sobre mí</h2>
+            <img src="images/perfil.svg" alt="Ilustración de perfil de Abraham" loading="lazy" width="320" height="320">
+            <p>
+                Soy estudiante de la licenciatura en Software Development de
+                <strong>BYU-Idaho Online</strong> y desarrollador en
+                <strong>Dubbex Soluciones Empresariales</strong>, donde construyo
+                productos con IA e integraciones para el ecosistema SAP S/4HANA.
+                Vivo en Monterrey, México, y me apasiona crear software útil
+                que resuelva problemas reales del mundo empresarial.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Lo que estoy construyendo</h2>
+            <img src="images/proyectos.svg" alt="Ilustración de proyectos de desarrollo" loading="lazy" width="320" height="320">
+            <p>
+                Actualmente trabajo en un <strong>Asistente PMO conversacional</strong>
+                integrado con Microsoft 365 y SAP, y en un
+                <strong>Verificador Inteligente de Recepción</strong> con análisis
+                multimodal de imágenes y documentos. Me interesa el desarrollo
+                full-stack, la arquitectura de software y todo lo relacionado
+                con LLMs aplicados a empresas.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Abraham Castillo · Nuevo León, México</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
