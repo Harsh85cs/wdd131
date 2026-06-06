@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A filtered album of temples of The Church of Jesus Christ of Latter-day Saints with images, locations, dedication dates, and areas.">
+    <title>Temple Album | Filtered Temples</title>
+    <link rel="stylesheet" href="filtered-temples.css">
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav aria-label="Temple filter navigation">
+            <button id="home" class="active">Home</button>
+            <button id="old">Old</button>
+            <button id="new">New</button>
+            <button id="large">Large</button>
+            <button id="small">Small</button>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="gallery-title">Home</h2>
+        <div id="gallery" class="gallery"></div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Abraham — Temple Album — Last modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="filtered-temples.js"></script>
+</body>
+</html>
