@@ -34,7 +34,7 @@ nav {
     flex-wrap: wrap;
 }
 
-nav button {
+nav a {
     background-color: transparent;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -43,14 +43,15 @@ nav button {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s, border-color 0.3s;
+    text-decoration: none;
 }
 
-nav button:hover {
+nav a:hover {
     background-color: rgba(255, 255, 255, 0.15);
     border-color: white;
 }
 
-nav button.active {
+nav a.active {
     background-color: white;
     color: #1a3d5c;
     font-weight: bold;
@@ -139,7 +140,7 @@ footer {
         font-size: 1.4rem;
     }
 
-    nav button {
+    nav a {
         padding: 0.3rem 0.8rem;
         font-size: 0.85rem;
     }

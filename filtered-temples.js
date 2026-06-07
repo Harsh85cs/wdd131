@@ -160,14 +160,15 @@ const titles = {
   small: "Small — Under 10,000 sq ft"
 };
 
-document.querySelectorAll("nav button").forEach((btn) => {
-  btn.addEventListener("click", () => {
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
     // Update active class
-    document.querySelector("nav button.active").classList.remove("active");
-    btn.classList.add("active");
+    document.querySelector("nav a.active").classList.remove("active");
+    link.classList.add("active");
 
     // Update title and display filtered temples
-    const category = btn.id;
+    const category = link.id;
     galleryTitle.textContent = titles[category];
     displayTemples(filterTemples(category));
   });
