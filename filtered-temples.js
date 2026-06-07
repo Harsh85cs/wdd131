@@ -61,7 +61,7 @@ const temples = [
     dedicated: "1893, April, 6",
     area: 253015,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-15669-main.jpg"
   },
   {
     templeName: "São Paulo Brazil",
@@ -69,7 +69,7 @@ const temples = [
     dedicated: "1978, October, 30",
     area: 59246,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/sao-paulo-brazil/400x250/sao-paulo-brazil-temple-702702-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/_temp/017-S%C3%A3o-Paulo-Brazil-Temple.jpg"
   },
   {
     templeName: "Monterrey Mexico",
@@ -77,7 +77,7 @@ const temples = [
     dedicated: "2002, April, 28",
     area: 10700,
     imageUrl:
-      "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/monterrey-mexico/400x250/monterrey-mexico-temple-background-702747-wallpaper.jpg"
+      "https://churchofjesuschristtemples.org/assets/img/temples/monterrey-mexico-temple/monterrey-mexico-temple-1068-main.jpg"
   }
 ];
 
