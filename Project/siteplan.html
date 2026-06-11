@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Plan – KeyStart: A Beginner's Guide to Mechanical Keyboards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="siteplan.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="36" height="24" rx="4" fill="#E8FF47" />
+          <rect x="6" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="14" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="22" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="30" y="12" width="4" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="6" y="21" width="28" height="6" rx="1.5" fill="#0D0D0D" />
+        </svg>
+        <span class="logo-text">KeyStart</span>
+      </div>
+      <p class="header-subtitle">WDD 131 — Site Plan Document</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── 1. SITE NAME ───────────────────────────────────────────────── -->
+    <section class="section" id="site-name">
+      <div class="section-label">01</div>
+      <h2>Site Name</h2>
+
+      <div class="card">
+        <div class="card-name">
+          <div class="inline-logo">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="5" width="26" height="18" rx="3" fill="#E8FF47" />
+              <rect x="4" y="8" width="4" height="4" rx="1" fill="#0D0D0D" />
+              <rect x="10" y="8" width="4" height="4" rx="1" fill="#0D0D0D" />
+              <rect x="16" y="8" width="4" height="4" rx="1" fill="#0D0D0D" />
+              <rect x="22" y="8" width="3" height="4" rx="1" fill="#0D0D0D" />
+              <rect x="4" y="15" width="20" height="4" rx="1" fill="#0D0D0D" />
+            </svg>
+            <strong>KeyStart</strong>
+          </div>
+          <span class="tag">Beginner's Guide to Mechanical Keyboards</span>
+        </div>
+
+        <p class="card-body">
+          <strong>KeyStart</strong> combines <em>keyboard</em> with <em>start</em> — speaking directly to someone taking their first steps into the mechanical keyboard hobby. The name is short, easy to remember, and implies guidance without being condescending. It doesn't require prior knowledge to understand, which matches the site's core audience.
+        </p>
+
+        <div class="domain-chip">
+          <span class="domain-label">Optional domain</span>
+          <code>keystart.guide</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2. SITE PURPOSE ────────────────────────────────────────────── -->
+    <section class="section" id="site-purpose">
+      <div class="section-label">02</div>
+      <h2>Site Purpose</h2>
+
+      <div class="card">
+        <p class="card-body">
+          KeyStart is an educational resource for people who are curious about mechanical keyboards but don't know where to begin. The site covers what mechanical keyboards are and why people care about them, the three main switch types (linear, tactile, clicky) and what each one feels like, the key components of a keyboard (PCB, case, switches, keycaps, stabilizers), a budget-based buying guide for first-time builders or buyers, a side-by-side comparison of popular entry-level options, and a glossary of common hobby terms.
+        </p>
+        <p class="card-body">
+          Content is structured so a visitor can read front-to-back or jump to any topic independently. JavaScript will be used to add interactivity — a switch type comparison tool, glossary filtering, and a dynamic keyboard recommendation based on user input.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── 3. SCENARIOS ───────────────────────────────────────────────── -->
+    <section class="section" id="scenarios">
+      <div class="section-label">03</div>
+      <h2>Scenarios</h2>
+
+      <p class="section-intro">Questions a first-time visitor might arrive with — these drive the site's content and structure.</p>
+
+      <ul class="scenario-list">
+        <li class="scenario-item">
+          <span class="scenario-icon" aria-hidden="true">?</span>
+          <p>I've heard mechanical keyboards are better for typing, but I don't know the difference between switch types. Which one is right for me?</p>
+        </li>
+        <li class="scenario-item">
+          <span class="scenario-icon" aria-hidden="true">?</span>
+          <p>I have a $60–$80 budget. What's the best entry-level mechanical keyboard I can actually buy right now?</p>
+        </li>
+        <li class="scenario-item">
+          <span class="scenario-icon" aria-hidden="true">?</span>
+          <p>People in forums keep using terms like "hotswap", "sound dampening", and "south-facing PCB" — what do any of these mean?</p>
+        </li>
+        <li class="scenario-item">
+          <span class="scenario-icon" aria-hidden="true">?</span>
+          <p>Is building a keyboard from scratch worth it compared to buying a pre-built one at this price range?</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── 4. COLOR SCHEMA ────────────────────────────────────────────── -->
+    <section class="section" id="color-schema">
+      <div class="section-label">04</div>
+      <h2>Color Schema</h2>
+
+      <p class="section-intro">The palette is inspired by custom keycap sets — deep, neutral base colors with a sharp accent that commands attention without overpowering.</p>
+
+      <div class="color-grid">
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#0D0D0D; border: 1px solid #2a2a2a;"></div>
+          <div class="color-info">
+            <strong>#0D0D0D</strong>
+            <span>Near Black</span>
+            <p>Page background. Creates the dark, focused atmosphere of a late-night build session. Used on <code>&lt;body&gt;</code>.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#1A1A1A; border: 1px solid #2a2a2a;"></div>
+          <div class="color-info">
+            <strong>#1A1A1A</strong>
+            <span>Surface</span>
+            <p>Card and section backgrounds. Lifts content slightly off the page background. Used on <code>.card</code>, <code>.nav</code>.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#E8FF47;"></div>
+          <div class="color-info">
+            <strong>#E8FF47</strong>
+            <span>Acid Yellow — Primary Accent</span>
+            <p>The single bold color. Used on headings, key labels, hover states, links, and the logo. Inspired by the iconic "Varmilo" and "GMK" keycap colorways.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#F0F0F0;"></div>
+          <div class="color-info">
+            <strong>#F0F0F0</strong>
+            <span>Off White — Body Text</span>
+            <p>Primary readable text. Slightly off-white reduces contrast fatigue on dark backgrounds for long-form reading.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#888888;"></div>
+          <div class="color-info">
+            <strong>#888888</strong>
+            <span>Muted — Secondary Text</span>
+            <p>Labels, captions, metadata, section numbers, and placeholder content. Keeps hierarchy clear without adding more colors.</p>
+          </div>
+        </div>
+
+        <div class="color-card">
+          <div class="color-swatch" style="background:#2D2D2D; border: 1px solid #3a3a3a;"></div>
+          <div class="color-info">
+            <strong>#2D2D2D</strong>
+            <span>Border / Divider</span>
+            <p>Card borders, horizontal rules, and subtle separation between elements. Keeps the layout structured without heavy lines.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 5. TYPOGRAPHY ─────────────────────────────────────────────── -->
+    <section class="section" id="typography">
+      <div class="section-label">05</div>
+      <h2>Typography</h2>
+
+      <p class="section-intro">Two typefaces — chosen for contrast in personality while sharing the same clean, geometric DNA.</p>
+
+      <div class="type-grid">
+
+        <div class="type-card">
+          <div class="type-sample type-display">Space Grotesk</div>
+          <div class="type-info">
+            <strong>Space Grotesk</strong> — Display & Headings
+            <p>Used for: <code>h1</code>, <code>h2</code>, <code>h3</code>, navigation items, the logo, and the site name. Its slightly quirky letterforms (note the curved terminals on 'a', 'r', 't') give the technical content a personality without being unreadable. Weight: 700 for headings, 500 for subheadings.</p>
+          </div>
+        </div>
+
+        <div class="type-card">
+          <div class="type-sample type-body">Inter — clean & readable for long text</div>
+          <div class="type-info">
+            <strong>Inter</strong> — Body Text & UI
+            <p>Used for: paragraphs, list items, card descriptions, table content, form labels, and captions. Highly legible at small sizes and optimized for screens. Weight: 400 for body copy, 500 for labels and small UI elements.</p>
+          </div>
+        </div>
+
+        <div class="type-card">
+          <div class="type-sample type-mono">monospace → hotswap, PCB, RGB</div>
+          <div class="type-info">
+            <strong>System Monospace</strong> — Code & Technical Terms
+            <p>Used for: glossary terms, technical specifications, part names in context, and any code snippets. Uses the browser's default monospace stack (<code>ui-monospace, 'Courier New'</code>) — no additional font load needed.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 6. WIREFRAMES ─────────────────────────────────────────────── -->
+    <section class="section" id="wireframes">
+      <div class="section-label">06</div>
+      <h2>Wireframes</h2>
+
+      <p class="section-intro">Layout diagrams for the project's home page in mobile and desktop views. Content is represented as blocks — no actual copy included.</p>
+
+      <div class="wireframe-grid">
+
+        <!-- MOBILE WIREFRAME -->
+        <div class="wireframe-wrap">
+          <h3>Mobile <span class="wf-size">( &lt; 768px )</span></h3>
+          <div class="wireframe wireframe--mobile">
+
+            <div class="wf-block wf-nav">
+              <span>LOGO</span>
+              <span>☰</span>
+            </div>
+
+            <div class="wf-block wf-hero">
+              <div class="wf-hero-eyebrow">BEGINNER'S GUIDE</div>
+              <div class="wf-hero-title">[ HERO HEADLINE ]</div>
+              <div class="wf-hero-sub">[ Subheadline — one sentence ]</div>
+              <div class="wf-cta">[ START HERE ] button</div>
+            </div>
+
+            <div class="wf-section-label">What is a Mech KB?</div>
+            <div class="wf-block wf-content-block">[ Image ]</div>
+            <div class="wf-block wf-content-block wf-text">[ Intro paragraph ]</div>
+
+            <div class="wf-section-label">Switch Types</div>
+            <div class="wf-block wf-card-small">[ Linear card ]</div>
+            <div class="wf-block wf-card-small">[ Tactile card ]</div>
+            <div class="wf-block wf-card-small">[ Clicky card ]</div>
+
+            <div class="wf-section-label">Top Picks</div>
+            <div class="wf-block wf-card-small">[ Product card 1 ]</div>
+            <div class="wf-block wf-card-small">[ Product card 2 ]</div>
+            <div class="wf-block wf-card-small">[ Product card 3 ]</div>
+
+            <div class="wf-block wf-glossary-bar">
+              [ Glossary search bar ]
+            </div>
+            <div class="wf-block wf-glossary-list">
+              [ Glossary term list ]
+            </div>
+
+            <div class="wf-block wf-footer">
+              [ Footer: links · credits ]
+            </div>
+
+          </div>
+        </div>
+
+        <!-- DESKTOP WIREFRAME -->
+        <div class="wireframe-wrap">
+          <h3>Desktop <span class="wf-size">( ≥ 1024px )</span></h3>
+          <div class="wireframe wireframe--desktop">
+
+            <div class="wf-block wf-nav wf-nav--desktop">
+              <span>LOGO + KEYSTART</span>
+              <span>Home &nbsp; Switches &nbsp; Components &nbsp; Picks &nbsp; Glossary</span>
+            </div>
+
+            <div class="wf-block wf-hero wf-hero--desktop">
+              <div class="wf-hero-left">
+                <div class="wf-hero-eyebrow">BEGINNER'S GUIDE</div>
+                <div class="wf-hero-title wf-hero-title--lg">[ HERO HEADLINE ]</div>
+                <div class="wf-hero-sub">[ One-line subheadline ]</div>
+                <div class="wf-cta">[ START HERE ]</div>
+              </div>
+              <div class="wf-hero-right">[ Keyboard illustration / image ]</div>
+            </div>
+
+            <div class="wf-two-col">
+              <div>
+                <div class="wf-section-label">What is a Mech KB?</div>
+                <div class="wf-block wf-text-wide">[ Intro text — 2 paragraphs ]</div>
+              </div>
+              <div>
+                <div class="wf-block wf-img-wide">[ Image / diagram ]</div>
+              </div>
+            </div>
+
+            <div class="wf-section-label">Switch Types</div>
+            <div class="wf-three-col">
+              <div class="wf-block wf-card-large">[ Linear ]<br/><small>description</small></div>
+              <div class="wf-block wf-card-large">[ Tactile ]<br/><small>description</small></div>
+              <div class="wf-block wf-card-large">[ Clicky ]<br/><small>description</small></div>
+            </div>
+
+            <div class="wf-section-label">Top Picks &amp; Comparison</div>
+            <div class="wf-block wf-table">
+              [ Comparison table: Name | Price | Switches | Hotswap | Rating ]
+            </div>
+
+            <div class="wf-two-col">
+              <div>
+                <div class="wf-section-label">Glossary</div>
+                <div class="wf-block wf-glossary-bar">[ Search input ]</div>
+                <div class="wf-block wf-glossary-list--wide">[ Term list — filterable ]</div>
+              </div>
+              <div>
+                <div class="wf-section-label">Quick Recommender</div>
+                <div class="wf-block wf-recommender">
+                  [ Budget selector ]<br/>
+                  [ Use case toggle: gaming / typing ]<br/>
+                  [ → Recommended pick ]
+                </div>
+              </div>
+            </div>
+
+            <div class="wf-block wf-footer wf-footer--desktop">
+              [ Footer: Logo · Nav links · Credits · Back to top ]
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>WDD 131 — Website Planning Document &nbsp;·&nbsp; KeyStart Project &nbsp;·&nbsp; Abraham</p>
+  </footer>
+
+</body>
+</html>
