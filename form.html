@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form | WDD 131</title>
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Share Your Experience</h2>
+            <p class="form-intro">Help others by reviewing a product you've installed. Fields marked with <span class="required-indicator">*</span> are required.</p>
+
+            <form action="review.html" method="get">
+
+                <!-- Product Name -->
+                <div class="form-group">
+                    <label for="productName">Product Name <span class="required-indicator">*</span></label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                        <!-- Options populated by JS -->
+                    </select>
+                </div>
+
+                <!-- Overall Rating -->
+                <fieldset class="form-group rating-group">
+                    <legend>Overall Rating <span class="required-indicator">*</span></legend>
+                    <div class="star-rating">
+                        <input type="radio" id="rate5" name="rating" value="5" required>
+                        <label for="rate5" title="5 stars">&#9734;&#9734;&#9734;&#9734;&#9734;</label>
+
+                        <input type="radio" id="rate4" name="rating" value="4">
+                        <label for="rate4" title="4 stars">&#9734;&#9734;&#9734;&#9734;</label>
+
+                        <input type="radio" id="rate3" name="rating" value="3">
+                        <label for="rate3" title="3 stars">&#9734;&#9734;&#9734;</label>
+
+                        <input type="radio" id="rate2" name="rating" value="2">
+                        <label for="rate2" title="2 stars">&#9734;&#9734;</label>
+
+                        <input type="radio" id="rate1" name="rating" value="1">
+                        <label for="rate1" title="1 star">&#9734;</label>
+                    </div>
+                </fieldset>
+
+                <!-- Date of Installation -->
+                <div class="form-group">
+                    <label for="installDate">Date of Installation <span class="required-indicator">*</span></label>
+                    <input type="date" id="installDate" name="installDate" required>
+                </div>
+
+                <!-- Useful Features -->
+                <fieldset class="form-group">
+                    <legend>Useful Features (check all that apply)</legend>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="easyUse" name="features" value="Easy to Use">
+                            <label for="easyUse">Easy to Use</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="quality" name="features" value="High Quality">
+                            <label for="quality">High Quality</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="durable" name="features" value="Durable">
+                            <label for="durable">Durable</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="goodValue" name="features" value="Good Value">
+                            <label for="goodValue">Good Value</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="easyInstall" name="features" value="Easy to Install">
+                            <label for="easyInstall">Easy to Install</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="looksgood" name="features" value="Looks Good">
+                            <label for="looksgood">Looks Good</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Written Review -->
+                <div class="form-group">
+                    <label for="writtenReview">Written Review</label>
+                    <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Share your experience with this product..."></textarea>
+                </div>
+
+                <!-- User Name -->
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" name="userName" placeholder="e.g. John Doe">
+                </div>
+
+                <!-- Submit -->
+                <div class="form-group">
+                    <input type="submit" value="Submit Review">
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | WDD 131 | Abraham</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>

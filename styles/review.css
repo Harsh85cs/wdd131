@@ -1,0 +1,339 @@
+/* ===== Custom Properties ===== */
+:root {
+    --color-bg: #f5f7fa;
+    --color-surface: #ffffff;
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-text: #1e293b;
+    --color-text-muted: #64748b;
+    --color-border: #cbd5e1;
+    --color-border-focus: #2563eb;
+    --color-star: #f59e0b;
+    --color-success: #16a34a;
+    --color-danger: #dc2626;
+    --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 8px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --max-width: 640px;
+    --transition: 200ms ease;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Base ===== */
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 2rem 1rem;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--color-primary);
+    color: #fff;
+    text-align: center;
+    padding: 1.25rem 1rem;
+    box-shadow: var(--shadow-md);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* ===== Form Container ===== */
+.form-container,
+.confirmation-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-container h2,
+.confirmation-container h2 {
+    font-size: 1.35rem;
+    margin-bottom: 0.25rem;
+}
+
+.form-intro {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.required-indicator {
+    color: var(--color-danger);
+    font-weight: 700;
+}
+
+/* ===== Form Groups ===== */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label,
+.form-group legend {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    color: var(--color-text);
+}
+
+fieldset.form-group {
+    border: none;
+    padding: 0;
+}
+
+fieldset.form-group legend {
+    padding: 0;
+}
+
+/* ===== Inputs & Select ===== */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    border: 1.5px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+    color: var(--color-text);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ===== Star Rating ===== */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.15rem;
+}
+
+.star-rating input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.star-rating label {
+    font-size: 0;
+    cursor: pointer;
+    color: var(--color-border);
+    transition: color var(--transition);
+    margin-bottom: 0;
+    font-weight: normal;
+}
+
+/* Show only the last star character of each label */
+.star-rating label::before {
+    content: '\2606';
+    font-size: 2rem;
+    line-height: 1;
+}
+
+/* Highlight on hover and when selected */
+.star-rating input:checked ~ label::before,
+.star-rating label:hover::before,
+.star-rating label:hover ~ label::before {
+    content: '\2605';
+    color: var(--color-star);
+}
+
+/* Focus indicator for keyboard users */
+.star-rating input:focus-visible + label {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* ===== Checkbox Group ===== */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.checkbox-item label {
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* ===== Submit Button ===== */
+input[type="submit"],
+.btn-back {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+    text-align: center;
+    text-decoration: none;
+}
+
+input[type="submit"]:hover,
+.btn-back:hover {
+    background-color: var(--color-primary-hover);
+}
+
+input[type="submit"]:active,
+.btn-back:active {
+    transform: scale(0.98);
+}
+
+input[type="submit"]:focus-visible,
+.btn-back:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* ===== Confirmation Page ===== */
+.confirmation-container {
+    text-align: center;
+}
+
+.confirmation-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    background-color: var(--color-success);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.confirmation-message {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.review-summary {
+    text-align: left;
+    background: var(--color-bg);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+}
+
+.review-summary p {
+    margin-bottom: 0.5rem;
+}
+
+.review-summary span.label {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.review-counter {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.review-counter strong {
+    color: var(--color-primary);
+    font-size: 1.25rem;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.25rem 1rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    border-top: 1px solid var(--color-border);
+    background: var(--color-surface);
+}
+
+footer p {
+    margin-bottom: 0.15rem;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 480px) {
+    .checkbox-group {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-container,
+    .confirmation-container {
+        padding: 2.5rem 2.5rem;
+    }
+
+    main {
+        padding: 3rem 1.5rem;
+    }
+}

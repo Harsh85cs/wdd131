@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted | WDD 131</title>
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <section class="confirmation-container">
+            <div class="confirmation-icon">&#10003;</div>
+            <h2>Thank You for Your Review!</h2>
+            <p class="confirmation-message">Your feedback has been submitted successfully.</p>
+
+            <div class="review-summary" id="reviewSummary">
+                <!-- Populated by JS -->
+            </div>
+
+            <p class="review-counter">
+                Total Reviews Submitted: <strong id="reviewCount">0</strong>
+            </p>
+
+            <a href="form.html" class="btn-back">Submit Another Review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> | WDD 131 | Abraham</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="js/review.js"></script>
+</body>
+</html>
