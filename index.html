@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KeyStart is a beginner's guide to mechanical keyboards: switch types, components, buying advice, and a glossary for newcomers to the hobby." />
+  <meta name="author" content="Abraham Lopez" />
+  <title>KeyStart — A Beginner's Guide to Mechanical Keyboards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="36" height="24" rx="4" fill="#E8FF47" />
+          <rect x="6" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="14" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="22" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="30" y="12" width="4" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="6" y="21" width="28" height="6" rx="1.5" fill="#0D0D0D" />
+        </svg>
+        <span class="logo-text">KeyStart</span>
+      </a>
+      <button id="menu-button" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="contact.html">Get Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="hero-eyebrow">Beginner's Guide</p>
+        <h1>Your first mechanical keyboard, explained simply.</h1>
+        <p class="lead">No jargon, no gatekeeping. Learn what switches feel like, what the parts do, and which board to buy first — then get a personalized pick below.</p>
+        <a href="switches.html" class="button">Explore switch types</a>
+      </div>
+      <img src="images/hero-keyboard.jpg" alt="A mechanical keyboard with backlit keycaps on a desk" width="600" height="400" />
+    </section>
+
+    <section>
+      <h2>What is a mechanical keyboard?</h2>
+      <p>Unlike a regular membrane keyboard, a mechanical keyboard uses an individual spring-loaded switch under every key. That switch is what gives each keypress its distinct feel and sound — and it's the reason the hobby exists. You can swap switches, keycaps, and even the case to make a board that types and sounds exactly how you like.</p>
+    </section>
+
+    <section>
+      <h2>The three things every beginner should know</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Switches</h3>
+          <p>The mechanism under each key. They come in three families — linear, tactile, and clicky — and they define how the board feels.</p>
+        </article>
+        <article class="card">
+          <h3>Components</h3>
+          <p>The PCB (the circuit board), the case, the keycaps, and the stabilizers for big keys. Together they shape sound and looks.</p>
+        </article>
+        <article class="card">
+          <h3>Hotswap</h3>
+          <p>A hotswap board lets you pull out switches by hand — no soldering. It's the easiest way to experiment as a beginner.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Find your first keyboard</h2>
+      <p class="lead">Answer two quick questions and we'll recommend an entry-level board that fits.</p>
+      <form class="quiz" id="quiz">
+        <label for="budget">What's your budget? (USD)</label>
+        <input type="number" id="budget" name="budget" min="20" max="300" value="80" required />
+
+        <label for="use-case">Mostly for…</label>
+        <select id="use-case" name="use-case">
+          <option value="gaming">Gaming</option>
+          <option value="typing">Typing &amp; work</option>
+        </select>
+
+        <button type="submit" class="button">Recommend a keyboard</button>
+
+        <div id="quiz-result" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <section>
+      <h2>Your saved keyboards</h2>
+      <p>Boards you save from the recommender are stored in your browser so they're here when you come back.</p>
+      <ul id="fav-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KeyStart — A WDD 131 Project by Abraham</p>
+    <p><span id="last-modified"></span></p>
+    <p><a href="references.html">References &amp; image credits</a></p>
+  </footer>
+
+</body>
+</html>

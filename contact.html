@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Get personalized help choosing your first mechanical keyboard. Tell us your budget, use case, and preferences." />
+  <meta name="author" content="Abraham Lopez" />
+  <title>Get Help — KeyStart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="36" height="24" rx="4" fill="#E8FF47" />
+          <rect x="6" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="14" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="22" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="30" y="12" width="4" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="6" y="21" width="28" height="6" rx="1.5" fill="#0D0D0D" />
+        </svg>
+        <span class="logo-text">KeyStart</span>
+      </a>
+      <button id="menu-button" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="contact.html" class="active">Get Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p class="hero-eyebrow">Get Help</p>
+      <h1>Ask for a recommendation</h1>
+      <p class="lead">Fill out the form and we'll point you toward a good first board. Everything here is optional except your name and email.</p>
+    </section>
+
+    <section>
+      <form method="get" action="confirmation.html">
+        <fieldset>
+          <legend>About you</legend>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Your preferences</legend>
+
+          <label for="budget">Budget (USD)</label>
+          <input type="number" id="budget" name="budget" min="20" max="500" />
+
+          <label for="experience">Experience level</label>
+          <select id="experience" name="experience">
+            <option value="none">Total beginner</option>
+            <option value="some">Owned one before</option>
+            <option value="builder">Want to build my own</option>
+          </select>
+
+          <p style="margin-top:1rem;">Mainly used for</p>
+          <div class="radio-group">
+            <label><input type="radio" name="use" value="gaming" checked /> Gaming</label>
+            <label><input type="radio" name="use" value="typing" /> Typing &amp; work</label>
+            <label><input type="radio" name="use" value="both" /> A bit of both</label>
+          </div>
+
+          <p style="margin-top:1rem;">Sound preference</p>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="sound" value="quiet" /> Keep it quiet</label>
+            <label><input type="checkbox" name="sound" value="thocky" /> Deeper "thock"</label>
+            <label><input type="checkbox" name="sound" value="clicky" /> Don't mind clicks</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Anything else?</legend>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="4"></textarea>
+        </fieldset>
+
+        <button type="submit" class="button">Send request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KeyStart — A WDD 131 Project by Abraham</p>
+    <p><span id="last-modified"></span></p>
+    <p><a href="references.html">References &amp; image credits</a></p>
+  </footer>
+
+</body>
+</html>

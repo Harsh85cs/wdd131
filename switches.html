@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare mechanical keyboard switch types — linear, tactile, and clicky — with feel, force, and sound for each one." />
+  <meta name="author" content="Abraham Lopez" />
+  <title>Switch Types — KeyStart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="36" height="24" rx="4" fill="#E8FF47" />
+          <rect x="6" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="14" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="22" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="30" y="12" width="4" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="6" y="21" width="28" height="6" rx="1.5" fill="#0D0D0D" />
+        </svg>
+        <span class="logo-text">KeyStart</span>
+      </a>
+      <button id="menu-button" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html" class="active">Switches</a></li>
+        <li><a href="contact.html">Get Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p class="hero-eyebrow">Switch Guide</p>
+      <h1>The three switch families</h1>
+      <p class="lead">Every switch fits into one of three groups. Filter the list below to feel out which one matches how you want to type.</p>
+    </section>
+
+    <section>
+      <h2>Quick comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Feel</th>
+            <th scope="col">Sound</th>
+            <th scope="col">Best for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Linear</td>
+            <td>Smooth, no bump</td>
+            <td>Quiet</td>
+            <td>Gaming, fast typists</td>
+          </tr>
+          <tr>
+            <td>Tactile</td>
+            <td>Noticeable bump</td>
+            <td>Moderate</td>
+            <td>Typing, all-purpose</td>
+          </tr>
+          <tr>
+            <td>Clicky</td>
+            <td>Bump + click</td>
+            <td>Loud</td>
+            <td>People who love feedback</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Browse switches</h2>
+      <div class="filter-bar" role="group" aria-label="Filter switches by type">
+        <button class="filter-btn active" data-type="all">All</button>
+        <button class="filter-btn" data-type="linear">Linear</button>
+        <button class="filter-btn" data-type="tactile">Tactile</button>
+        <button class="filter-btn" data-type="clicky">Clicky</button>
+      </div>
+      <div class="card-grid" id="switch-grid"></div>
+    </section>
+
+    <section>
+      <h2>Keycaps change everything</h2>
+      <p>Two boards with identical switches can sound completely different depending on the keycaps. Profile, material, and thickness all matter — it's one of the easiest upgrades for a beginner.</p>
+      <img src="images/hero-keyboard.jpg" alt="Close-up of a keyboard showing keycaps and switches" width="600" height="400" loading="lazy" style="border-radius:12px;border:1px solid var(--border-color);margin-top:1rem;" />
+    </section>
+
+    <section>
+      <h2>A few terms you'll see</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Actuation force</h3>
+          <p>How hard you press before a key registers, measured in grams. Lower feels lighter; higher feels firmer.</p>
+        </article>
+        <article class="card">
+          <h3>Bottoming out</h3>
+          <p>Pressing a key all the way down. Some typists float above it; others press firmly each time.</p>
+        </article>
+        <article class="card">
+          <h3>Keycaps</h3>
+          <p>The plastic caps you actually touch. Material and profile change both feel and sound.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KeyStart — A WDD 131 Project by Abraham</p>
+    <p><span id="last-modified"></span></p>
+    <p><a href="references.html">References &amp; image credits</a></p>
+  </footer>
+
+</body>
+</html>

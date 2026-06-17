@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your KeyStart recommendation request was received." />
+  <meta name="author" content="Abraham Lopez" />
+  <title>Request Received — KeyStart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="scripts/main.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="8" width="36" height="24" rx="4" fill="#E8FF47" />
+          <rect x="6" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="14" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="22" y="12" width="6" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="30" y="12" width="4" height="6" rx="1.5" fill="#0D0D0D" />
+          <rect x="6" y="21" width="28" height="6" rx="1.5" fill="#0D0D0D" />
+        </svg>
+        <span class="logo-text">KeyStart</span>
+      </a>
+      <button id="menu-button" aria-label="Toggle navigation">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="contact.html">Get Help</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p class="hero-eyebrow">Thank you</p>
+      <h1>Your request was received</h1>
+      <div class="card">
+        <h3>Here's what you sent</h3>
+        <p id="summary">Loading your details…</p>
+        <a href="switches.html" class="button">Browse switches while you wait</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> KeyStart — A WDD 131 Project by Abraham</p>
+    <p><span id="last-modified"></span></p>
+    <p><a href="references.html">References &amp; image credits</a></p>
+  </footer>
+
+  <script>
+    // Read submitted form values from the query string and show them back.
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name") || "there";
+    const email = params.get("email") || "(no email provided)";
+    const use = params.get("use") || "not specified";
+    const summary = document.querySelector("#summary");
+    summary.textContent = `Thanks ${name}! We'll send recommendations to ${email}. Primary use: ${use}.`;
+  </script>
+
+</body>
+</html>
