@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Abraham Lopez</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Abraham Lopez Perez. Home page for Abraham Lopez Perez's WDD 131 course.">
+    <meta name="author" content="Abraham Lopez">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 Abraham Lopez</h1>
+    <header>
+        <h1>WDD 131 Dynamic Web Fundamentals</h1>
+        <nav>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/abraham-lópez-pérez-139310212" target="_blank">Linkedln</a></li>
+            <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/33?lang=eng&id=p6#p6">Favorite Scripture</a></li>
+            <li><a href="#">Final Project</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <h1> Abraham Lopez</h1>
+        
+        <div class="cards">
+            <section class="card">
+                <h2>About me</h2>
+                <div class="card-content">
+                    <img src="images/abraham.jpg" alt="Abraham Lopez">
+                    <p>Hello! I am Abraham Lopez, a student at BYU-Pathway. I am passionate about web development and creating dynamic, user-friendly websites applying the new technologies to be a competent programmer.</p>
+                    <h3 class="place">Monterrey, Mexico</h3>
+                    <img class="flag" src="images/macroplaza-monterrey.jpg" alt="Macroplaza in Monterrey, Mexico">
+                    <p>
+                        Monterrey is one of Mexico's most important cities, known for
+                        its industry, cuisine, and the Cerro de la Silla mountain. It
+                        is a key technology and business hub in the northeast of the
+                        country.
+                    </p>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <div class="card-content">
+                <ul>
+                    <li><a href="https://dev.to">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com">Udemy</a></li>
+                    <li><a href="https://picsum.photos">Lorem Picsum</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; <span id="currentYear"></span> Abraham Lopez, Mexico</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
