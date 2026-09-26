@@ -1,0 +1,130 @@
+/* Global variables (colors of the Mexican flag) */
+:root {
+    --green: #006847;
+    --red: #ce1126;
+    --white: #ffffff;
+    --dark: #222222;
+    --font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+/* Header: title inside a box */
+header {
+    background-color: var(--green);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    display: inline-block;
+    margin: 0;
+    padding: 0.5rem 3rem;
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-weight: normal;
+}
+
+/* Hero image */
+.hero {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Data and Weather boxes (mobile view) */
+.data,
+.weather {
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px solid var(--green);
+    background-color: var(--white);
+    text-align: center;
+}
+
+.data h2,
+.weather h2 {
+    margin-top: 0;
+}
+
+.weather {
+    border-color: var(--red);
+}
+
+/* Label: Value in two columns */
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 1rem;
+}
+
+.label {
+    text-align: right;
+    font-weight: bold;
+}
+
+.info span:not(.label) {
+    text-align: left;
+}
+
+.weather-icon {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Wider view */
+@media (min-width: 700px) {
+    main {
+        position: relative;
+    }
+
+    .data,
+    .weather {
+        position: absolute;
+        width: 300px;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Data box: top left */
+    .data {
+        top: 2rem;
+        left: 1rem;
+    }
+
+    /* Weather box: right side, lower half */
+    .weather {
+        bottom: 3rem;
+        right: 1rem;
+    }
+
+    /* Hide the SVG and show the emoji after the heading */
+    .weather-icon {
+        display: none;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+    }
+}

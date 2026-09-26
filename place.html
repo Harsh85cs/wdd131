@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexico | Abraham | WDD 131</title>
+    <meta name="description" content="Country page about Mexico with basic data and current weather.">
+    <meta name="author" content="Abraham">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Mexico</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(min-width: 700px)" srcset="images/mexico-large.webp">
+            <img src="images/mexico-small.webp" alt="Colorful streets of a town in Mexico" width="500" height="700" class="hero">
+        </picture>
+
+        <section class="data">
+            <h2>Data</h2>
+            <div class="info">
+                <span class="label">Area:</span><span>1,964,375 sq km</span>
+                <span class="label">Population:</span><span>130,000,000</span>
+                <span class="label">Capital:</span><span>Mexico City</span>
+                <span class="label">Languages:</span><span>Spanish</span>
+                <span class="label">Currency:</span><span>Peso</span>
+                <span class="label">Time Zone:</span><span>UTC-6</span>
+            </div>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/weather.svg" alt="Partly cloudy icon" width="60" height="60" class="weather-icon">
+            <div class="info">
+                <span class="label">Temperature:</span><span><span id="temperature">8</span> &deg;C</span>
+                <span class="label">Conditions:</span><span>Partly Cloudy</span>
+                <span class="label">Wind:</span><span><span id="wind-speed">10</span> km/h</span>
+                <span class="label">Wind Chill:</span><span id="wind-chill"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> - Abraham - Monterrey, Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
