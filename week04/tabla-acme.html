@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACME Wildwest Services</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background-color: #f5ecd9;
+      padding: 40px;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 0 auto;
+      text-align: center;
+      border: 3px solid #5c3a1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(92, 58, 30, 0.35);
+    }
+
+    caption {
+      caption-side: bottom;
+      padding-top: 10px;
+      font-style: italic;
+      color: #5c3a1e;
+    }
+
+    th, td {
+      padding: 12px 24px;
+      border-bottom: 1px solid #d9c3a0;
+    }
+
+    /* Encabezado */
+    thead tr:first-child th {
+      background-color: #5c3a1e;
+      color: #f5ecd9;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 22px;
+    }
+
+    thead tr:nth-child(2) th {
+      background-color: #b5651d;
+      color: #ffffff;
+      font-size: 1.15rem;
+      border-bottom: 3px solid #5c3a1e;
+    }
+
+    thead tr:nth-child(2) th:first-child {
+      background-color: #5c3a1e;
+    }
+
+    /* Cuerpo */
+    tbody th {
+      text-align: left;
+      color: #5c3a1e;
+      font-size: 1.05rem;
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .yes {
+      color: #2e7d32;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .no {
+      color: #c62828;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    /* Zebra striping con nth-child */
+    tbody tr:nth-child(odd) {
+      background-color: #fffaf0;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #eedcbc;
+    }
+
+    tbody tr:hover {
+      background-color: #e3c48f;
+    }
+  </style>
+</head>
+<body>
+
+  <table>
+    <caption>Table 1: Account Feature Comparison</caption>
+    <thead>
+      <tr>
+        <th colspan="4">ACME Wildwest Services</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th>Basic</th>
+        <th>Premium</th>
+        <th>Deluxe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Feature 1</th>
+        <td class="yes">✔</td>
+        <td class="yes">✔</td>
+        <td class="yes">✔</td>
+      </tr>
+      <tr>
+        <th>Feature 2</th>
+        <td class="no">✖</td>
+        <td class="yes">✔</td>
+        <td class="yes">✔</td>
+      </tr>
+      <tr>
+        <th>Feature 3</th>
+        <td class="no">✖</td>
+        <td class="no">✖</td>
+        <td class="yes">✔</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
