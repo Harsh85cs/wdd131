@@ -1,10 +1,6 @@
 /* ===== Mobile-first base styles ===== */
+/* Colors (hex only): navy #1f2a44 | gold #c9a227 | off-white #f7f5f0 | text #1c1c1c | white #ffffff */
 :root {
-  --primary: #1f2a44;      /* deep navy */
-  --accent: #c9a227;       /* temple gold */
-  --bg: #f7f5f0;           /* warm off-white */
-  --text: #1c1c1c;
-  --light: #ffffff;
   --heading-font: "Cinzel", Georgia, serif;
   --body-font: "Source Sans 3", Arial, sans-serif;
 }
@@ -16,15 +12,15 @@
 body {
   margin: 0;
   font-family: var(--body-font);
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: #f7f5f0;
+  color: #1c1c1c;
   line-height: 1.5;
 }
 
 /* ----- Header ----- */
 header {
-  background-color: var(--primary);
-  color: var(--light);
+  background-color: #1f2a44;
+  color: #ffffff;
 }
 
 .header-bar {
@@ -45,9 +41,9 @@ header {
   font-size: 1.8rem;
   line-height: 1;
   background: none;
-  border: 2px solid var(--accent);
+  border: 2px solid #c9a227;
   border-radius: 6px;
-  color: var(--light);
+  color: #ffffff;
   padding: 0.2rem 0.6rem;
   cursor: pointer;
 }
@@ -68,23 +64,23 @@ header {
 }
 
 .navigation a {
-  color: var(--light);
+  color: #ffffff;
   text-decoration: none;
   text-align: center;
   padding: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid #ffffff26;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .navigation a:hover,
 .navigation a:focus {
-  background-color: var(--accent);
-  color: var(--primary);
+  background-color: #c9a227;
+  color: #1f2a44;
 }
 
 .navigation a.active {
   font-weight: 600;
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 3px solid #c9a227;
 }
 
 /* ----- Main ----- */
@@ -96,9 +92,9 @@ main {
 
 h1 {
   font-family: var(--heading-font);
-  color: var(--primary);
+  color: #1f2a44;
   text-align: center;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid #c9a227;
   padding-bottom: 0.5rem;
 }
 
@@ -111,11 +107,11 @@ h1 {
 
 figure {
   margin: 0;
-  background-color: var(--light);
-  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 8px #0000001f;
 }
 
 figure img {
@@ -132,7 +128,7 @@ figcaption {
 
 figcaption h2 {
   font-family: var(--heading-font);
-  color: var(--primary);
+  color: #1f2a44;
   font-size: 1.2rem;
   text-align: center;
   margin: 0 0 0.75rem;
@@ -147,7 +143,7 @@ figcaption h2 {
 
 .temple-info dt {
   font-weight: 600;
-  color: var(--primary);
+  color: #1f2a44;
 }
 
 .temple-info dd {
@@ -156,8 +152,8 @@ figcaption h2 {
 
 /* ----- Footer ----- */
 footer {
-  background-color: var(--primary);
-  color: var(--light);
+  background-color: #1f2a44;
+  color: #ffffff;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
