@@ -1,0 +1,35 @@
+/* ===== Larger view ===== */
+@media (min-width: 700px) {
+  #menu {
+    display: none;
+  }
+
+  .header-bar {
+    justify-content: center;
+  }
+
+  .navigation,
+  .navigation.open {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navigation a {
+    flex: 1 1 0;
+    max-width: 160px;
+    border-top: none;
+  }
+
+  .album {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  figure {
+    transition: transform 0.3s;
+  }
+
+  figure:hover {
+    transform: scale(1.03);
+  }
+}
