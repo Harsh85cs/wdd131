@@ -1,0 +1,143 @@
+:root {
+  --primary: #1E2329;
+  --secondary: #0F766E;
+  --accent: #F59E0B;
+  --background: #F5F7FA;
+  --white: #FFFFFF;
+  --heading-font: "Space Grotesk", Arial, sans-serif;
+  --body-font: "Inter", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  line-height: 1.6;
+  color: var(--primary);
+  background-color: var(--background);
+}
+
+header,
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header {
+  border-bottom: 6px solid var(--accent);
+}
+
+h1,
+h2 {
+  font-family: var(--heading-font);
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+section {
+  background-color: var(--white);
+  border-left: 6px solid var(--accent);
+  border-radius: 6px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+h2 {
+  color: var(--secondary);
+  font-size: 1.6rem;
+}
+
+.highlight {
+  font-family: var(--heading-font);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.code {
+  font-family: Consolas, monospace;
+  background-color: var(--background);
+  padding: 0 0.3rem;
+  border-radius: 3px;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.chip {
+  height: 80px;
+  border-radius: 6px;
+  border: 1px solid #CCCCCC;
+}
+
+.chip-primary { background-color: var(--primary); }
+.chip-secondary { background-color: var(--secondary); }
+.chip-accent { background-color: var(--accent); }
+.chip-background { background-color: var(--background); }
+
+.font-sample {
+  margin: 1rem 0;
+}
+
+.font-heading {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.font-body {
+  font-family: var(--body-font);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.wireframes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #CCCCCC;
+}
+
+figcaption {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .wireframes {
+    grid-template-columns: 1fr 3fr;
+    align-items: start;
+  }
+}
