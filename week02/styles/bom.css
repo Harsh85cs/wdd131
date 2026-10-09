@@ -76,3 +76,7 @@ li button {
   background: none;
   padding: 0.25rem;
 }
+
+.delete {
+  width: fit-content;
+}
