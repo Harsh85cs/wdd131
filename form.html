@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review | Abraham López</title>
+  <meta name="description" content="Submit a review for one of our products: rate it, list its most useful features, and share your experience.">
+  <meta name="author" content="Abraham López">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+    <p>Tell us how your product is working out. Fields marked <span class="req" aria-hidden="true">*</span> are required.</p>
+  </header>
+
+  <main>
+    <form action="review.html" method="get" class="review-form">
+
+      <div class="field">
+        <label for="product">Product Name <span class="req" aria-hidden="true">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </div>
+
+      <fieldset class="field">
+        <legend>Overall Rating <span class="req" aria-hidden="true">*</span></legend>
+        <div class="stars">
+          <input type="radio" id="rating1" name="rating" value="1" required>
+          <label for="rating1" title="1 star"><span class="sr-only">1 star</span>&#9733;</label>
+          <input type="radio" id="rating2" name="rating" value="2">
+          <label for="rating2" title="2 stars"><span class="sr-only">2 stars</span>&#9733;</label>
+          <input type="radio" id="rating3" name="rating" value="3">
+          <label for="rating3" title="3 stars"><span class="sr-only">3 stars</span>&#9733;</label>
+          <input type="radio" id="rating4" name="rating" value="4">
+          <label for="rating4" title="4 stars"><span class="sr-only">4 stars</span>&#9733;</label>
+          <input type="radio" id="rating5" name="rating" value="5">
+          <label for="rating5" title="5 stars"><span class="sr-only">5 stars</span>&#9733;</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="installDate">Date of Installation <span class="req" aria-hidden="true">*</span></label>
+        <input type="date" id="installDate" name="installDate" required>
+      </div>
+
+      <fieldset class="field">
+        <legend>Useful Features <span class="hint">(check all that apply)</span></legend>
+        <div class="checks">
+          <label for="featDurability"><input type="checkbox" id="featDurability" name="features" value="Durability"> Durability</label>
+          <label for="featPerformance"><input type="checkbox" id="featPerformance" name="features" value="Performance"> Performance</label>
+          <label for="featEase"><input type="checkbox" id="featEase" name="features" value="Ease of Use"> Ease of Use</label>
+          <label for="featDesign"><input type="checkbox" id="featDesign" name="features" value="Design"> Design</label>
+          <label for="featValue"><input type="checkbox" id="featValue" name="features" value="Value for Money"> Value for Money</label>
+        </div>
+      </fieldset>
+
+      <div class="field">
+        <label for="writtenReview">Written Review <span class="hint">(optional)</span></label>
+        <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="What did you like? What could be better?"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="userName">Your Name <span class="hint">(optional)</span></label>
+        <input type="text" id="userName" name="userName" autocomplete="name">
+      </div>
+
+      <input type="submit" value="Submit Review" class="submit-btn">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> &#127796; Abraham López &#127796; Monterrey, México</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script src="scripts/products.js"></script>
+  <script src="scripts/form.js"></script>
+  <script src="scripts/footer.js"></script>
+</body>
+</html>
