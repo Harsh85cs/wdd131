@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 260" width="280" height="260" font-family="Arial, sans-serif">
+<rect width="280" height="260" rx="10" fill="#F5F7FA"/>
+<path d="M40 20V200H260" stroke="#4B5563" stroke-width="2" fill="none"/>
+<path d="M140 30V200" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6 5"/>
+<path d="M40 200 L240 70" stroke="#0F766E" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="146" y="44" font-size="13" fill="#1E2329">actuation</text>
+<text x="150" y="222" font-size="13" fill="#1E2329" text-anchor="middle">Key travel (mm)</text>
+<text x="18" y="110" font-size="13" fill="#1E2329" transform="rotate(-90 18 110)" text-anchor="middle">Force</text>
+<text x="140" y="248" font-size="14" font-weight="700" fill="#1E2329" text-anchor="middle">Linear: smooth, steady force</text>
+</svg>

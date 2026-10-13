@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance Guides | KeyCraft Lab</title>
+  <meta name="description" content="Step-by-step guides to clean a mechanical keyboard and safely remove dust from a desktop PC.">
+  <meta name="author" content="Abraham">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="40" height="40">
+        KeyCraft Lab
+      </a>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></button>
+      <ul class="navigation" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="guides.html" class="active" aria-current="page">Guides</a></li>
+        <li><a href="contact.html">Share a Build</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Maintenance Guides</h1>
+      <p class="lead">Open a guide to see the steps. Start with the toolkit checklist so you have everything ready before you begin.</p>
+    </section>
+
+    <div class="guide-layout">
+      <section class="panel">
+        <h2>Your toolkit</h2>
+        <p>Check off the tools you already own. Your progress is saved on this device.</p>
+        <progress id="kit-progress" max="100" value="0" aria-label="Toolkit progress"></progress>
+        <p id="kit-status" aria-live="polite"></p>
+        <ul class="checklist" id="kit-list"></ul>
+        <button class="button" id="kit-reset" type="button">Clear checklist</button>
+      </section>
+
+      <section>
+        <h2>Step-by-step guides</h2>
+        <details open>
+          <summary>Quick keyboard clean (5 minutes, weekly)</summary>
+          <div class="guide-body">
+            <img src="images/keyboard-clean.svg" alt="Illustration of a keyboard being cleaned with a brush and compressed air" width="600" height="360" loading="lazy">
+            <ol>
+              <li>Unplug the keyboard or turn off its wireless connection.</li>
+              <li>Turn it upside down and gently tap it to drop loose crumbs.</li>
+              <li>Use a soft brush or short bursts of compressed air between the keycaps.</li>
+              <li>Wipe the keycaps with a microfiber cloth lightly dampened with isopropyl alcohol.</li>
+              <li>Let it dry for a few minutes before plugging it back in.</li>
+            </ol>
+          </div>
+        </details>
+
+        <details>
+          <summary>Keyboard deep clean (1 hour, every few months)</summary>
+          <div class="guide-body">
+            <ol>
+              <li>Take a photo of the keyboard so you remember where every keycap goes.</li>
+              <li>Unplug it and remove the keycaps with a keycap puller, pulling straight up.</li>
+              <li>Soak the keycaps in warm, soapy water for about 30 minutes, then rinse them.</li>
+              <li>While they soak, brush and blow out the exposed plate and switches.</li>
+              <li>Wipe the case and plate with a cloth and a little isopropyl alcohol.</li>
+              <li>Let the keycaps dry completely, ideally overnight, before reinstalling them.</li>
+            </ol>
+            <p class="warning"><strong>Caution:</strong> Never soak the keyboard itself or pour liquid onto the switches. Only the removed keycaps go in water.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>PC dust-out (30 minutes, every 3 to 6 months)</summary>
+          <div class="guide-body">
+            <img src="images/pc-clean.svg" alt="Illustration of an open PC case with a fan being cleaned by compressed air" width="600" height="360" loading="lazy">
+            <ol>
+              <li>Shut down the PC, switch the power supply off, and unplug the cable.</li>
+              <li>Move the PC to a well-ventilated area, outside if possible.</li>
+              <li>Remove and wash the dust filters, then let them dry completely.</li>
+              <li>Remove the side panel and work from the top of the case down.</li>
+              <li>Hold each fan still and clean it with short bursts of compressed air.</li>
+              <li>Blow dust out of the heatsinks, graphics card, and power supply vents.</li>
+              <li>Reinstall the filters and side panel, then reconnect power.</li>
+            </ol>
+            <p class="warning"><strong>Caution:</strong> Letting fans spin freely from compressed air can damage them. Use only short bursts near the motherboard and memory, and keep the can upright.</p>
+            <p>Homes with pets, carpet, or smokers should clean every two to three months.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Your first keyboard build</summary>
+          <div class="guide-body">
+            <ol>
+              <li>Pick a hot-swappable kit so you can install switches without soldering.</li>
+              <li>Choose a switch family using the <a href="switches.html">switch guide</a>.</li>
+              <li>Test the bare board by plugging it in and shorting each socket with tweezers.</li>
+              <li>Press each switch firmly into the plate until it clicks, keeping the pins straight.</li>
+              <li>Install the stabilizers and large keycaps first, then the rest of the keycaps.</li>
+              <li>Test every key with an online key tester before you start using it.</li>
+            </ol>
+          </div>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> KeyCraft Lab | Abraham | Monterrey, NL, México</p>
+    <p><a href="references.html">References</a> | <a href="siteplan.html">Site Plan</a></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/guides.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | KeyCraft Lab</title>
+  <meta name="description" content="Confirmation of your KeyCraft Lab submission.">
+  <meta name="author" content="Abraham">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="40" height="40">
+        KeyCraft Lab
+      </a>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></button>
+      <ul class="navigation" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="contact.html">Share a Build</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Thanks for reaching out!</h1>
+      <p class="lead" id="thanks-message">Your submission was received.</p>
+    </section>
+    <section class="panel">
+      <h2>Here is what you sent</h2>
+      <dl class="summary-list" id="summary"></dl>
+      <p id="submission-count"></p>
+      <a class="button" href="index.html">Back to home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> KeyCraft Lab | Abraham | Monterrey, NL, México</p>
+    <p><a href="references.html">References</a> | <a href="siteplan.html">Site Plan</a></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/thankyou.js"></script>
+</body>
+</html>

@@ -1,66 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Abraham Lopez</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Abraham Lopez Perez. Home page for Abraham Lopez Perez's WDD 131 course.">
-    <meta name="author" content="Abraham Lopez">
-    <link rel="stylesheet" href="styles/base.css">
-    <script src="scripts/getdates.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | KeyCraft Lab</title>
+  <meta name="description" content="KeyCraft Lab is a beginner's guide to choosing switches, cleaning keyboards, and keeping your PC dust-free.">
+  <meta name="author" content="Abraham">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header>
-        <span id="course-title">WDD 131 Dynamic Web Fundamentals</span>
-        <nav>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/abraham-lópez-pérez-139310212" target="_blank">Linkedln</a></li>
-            <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/33?lang=eng&id=p6#p6">Favorite Scripture</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
-        </nav>
-    </header>
-    <main>
-        <h1> Abraham Lopez</h1>
-        
-        <div class="cards">
-            <section class="card">
-                <h2>About me</h2>
-                <div class="card-content">
-                    <img src="images/abraham.jpg" alt="Abraham Lopez">
-                    <p>Hello! I am Abraham Lopez, a student at BYU-Pathway. I am passionate about web development and creating dynamic, user-friendly websites applying the new technologies to be a competent programmer.</p>
-                    <h3 class="place">Monterrey, Mexico</h3>
-                    <img class="flag" src="images/macroplaza-monterrey.jpg" alt="Macroplaza in Monterrey, Mexico">
-                    <p>
-                        Monterrey is one of Mexico's most important cities, known for
-                        its industry, cuisine, and the Cerro de la Silla mountain. It
-                        is a key technology and business hub in the northeast of the
-                        country.
-                    </p>
-                </div>
-            </section>
-            <section class="card">
-                <h2>Web Dev Resources</h2>
-                <div class="card-content">
-                <ul>
-                    <li><a href="https://dev.to">Dev.to Community</a></li>
-                    <li><a href="https://www.smashingmagazine.com">Smashing Magazine</a></li>
-                    <li><a href="https://css-tricks.com">CSS Tricks</a></li>
-                    <li><a href="https://www.w3schools.com">W3 Schools</a></li>
-                    <li><a href="https://www.udemy.com">Udemy</a></li>
-                    <li><a href="https://picsum.photos">Lorem Picsum</a></li>
-                </ul>
-                </div>
-            </section>
-        </div>
-    </main>
-    <footer>
-        <p>Copyright &copy; <span id="currentYear"></span> Abraham Lopez, Mexico</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
-    </footer>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="40" height="40">
+        KeyCraft Lab
+      </a>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></button>
+      <ul class="navigation" id="primary-nav">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="contact.html">Share a Build</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Build it. Clean it. Keep it clicking.</h1>
+        <p class="lead">KeyCraft Lab is a beginner-friendly workshop for anyone who wants to choose the right mechanical keyboard, keep it clean, and stop dust from slowly cooking their PC.</p>
+        <a class="button" href="switches.html">Find your switch</a>
+      </div>
+      <img src="images/hero-keyboard.svg" alt="Illustration of a dark mechanical keyboard with amber accent keys next to a single key switch" width="800" height="500" fetchpriority="high">
+    </section>
+
+    <section class="panel welcome" aria-live="polite">
+      <h2>Welcome to the lab</h2>
+      <p id="visit-message">Loading your visit history...</p>
+    </section>
+
+    <section>
+      <h2>Where do you want to start?</h2>
+      <div class="grid three">
+        <article class="card">
+          <img src="images/switch-tactile.svg" alt="Force curve chart showing a tactile bump just before the actuation point" width="280" height="260" loading="lazy">
+          <h3>Choose a switch</h3>
+          <p>Linear, tactile, or clicky? Compare popular switches by feel, force, and sound, then save your favorites for later.</p>
+          <a href="switches.html">Explore the switch guide</a>
+        </article>
+        <article class="card">
+          <img src="images/keyboard-clean.svg" alt="Illustration of a keyboard being cleaned with a brush and a can of compressed air" width="600" height="360" loading="lazy">
+          <h3>Clean your gear</h3>
+          <p>Step-by-step guides for a quick keyboard wipe-down, a full deep clean, and a safe PC dust-out.</p>
+          <a href="guides.html">Read the maintenance guides</a>
+        </article>
+        <article class="card">
+          <img src="images/tools.svg" alt="Illustration of a keycap puller, a brush, tweezers, and a bottle of isopropyl alcohol" width="600" height="360" loading="lazy">
+          <h3>Share your build</h3>
+          <p>Finished a keyboard or cleaned an old PC? Tell us about it or request a guide on a topic we have not covered yet.</p>
+          <a href="contact.html">Share a build</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="tip-box">
+      <h2>Maintenance tip</h2>
+      <p id="tip-text">Loading a tip...</p>
+      <button class="button" id="next-tip" type="button">Show another tip</button>
+    </section>
+
+    <section class="panel">
+      <h2>Why maintenance matters</h2>
+      <p>Dust, crumbs, and skin oils build up faster than most people think. On a keyboard, debris under the keycaps can make keys feel scratchy, register twice, or stop working. Inside a PC, dust clogs fans and heatsinks, which raises temperatures and makes the fans spin louder. A few minutes of regular care keeps your gear quieter, cooler, and working longer.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> KeyCraft Lab | Abraham | Monterrey, NL, México</p>
+    <p><a href="references.html">References</a> | <a href="siteplan.html">Site Plan</a></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/home.js"></script>
 </body>
 </html>

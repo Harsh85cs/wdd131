@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420" font-family="Arial, sans-serif" font-size="20">
+<rect width="800" height="420" fill="#FFFFFF"/>
+<g fill="#1E2329">
+<rect x="20" y="30" width="560" height="60" rx="8"/><rect x="20" y="130" width="460" height="60" rx="8"/><rect x="20" y="230" width="380" height="60" rx="8"/><rect x="20" y="330" width="320" height="60" rx="8"/>
+</g>
+<g fill="#F59E0B"><rect x="440" y="38" width="130" height="44" rx="5"/></g>
+<g fill="#0F766E"><rect x="390" y="38" width="44" height="44" rx="5"/><rect x="390" y="138" width="80" height="44" rx="5"/><rect x="350" y="238" width="40" height="44" rx="5"/></g>
+<g fill="#1E2329" font-weight="700"><text x="600" y="68">Full-size 100%</text><text x="500" y="168">TKL 80%</text><text x="420" y="268">65%</text><text x="360" y="368">60%</text></g>
+<g fill="#4B5563" font-size="15"><text x="600" y="90">Numpad + arrows</text><text x="500" y="190">Arrows, no numpad</text><text x="420" y="290">Arrow keys kept</text><text x="360" y="390">Alphas only</text></g>
+</svg>

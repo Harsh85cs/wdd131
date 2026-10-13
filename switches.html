@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch Guide | KeyCraft Lab</title>
+  <meta name="description" content="Compare linear, tactile, and clicky mechanical keyboard switches and keyboard layouts.">
+  <meta name="author" content="Abraham">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="40" height="40">
+        KeyCraft Lab
+      </a>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></button>
+      <ul class="navigation" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html" class="active" aria-current="page">Switches</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="contact.html">Share a Build</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Switch Guide</h1>
+      <p class="lead">The switch under each key decides how your keyboard feels and sounds. Every mechanical switch falls into one of three families.</p>
+    </section>
+
+    <section>
+      <h2>The three switch families</h2>
+      <div class="grid three">
+        <article class="card">
+          <img src="images/switch-linear.svg" alt="Force curve chart for a linear switch: a straight line rising steadily to the bottom" width="280" height="260" loading="lazy">
+          <h3>Linear</h3>
+          <p>A smooth, consistent press from top to bottom with no bump. Popular with gamers for fast, repeated presses.</p>
+        </article>
+        <article class="card">
+          <img src="images/switch-tactile.svg" alt="Force curve chart for a tactile switch: a small bump just before the actuation point" width="280" height="260" loading="lazy">
+          <h3>Tactile</h3>
+          <p>A noticeable bump tells your finger the key has registered. A comfortable all-around choice for typing and gaming.</p>
+        </article>
+        <article class="card">
+          <img src="images/switch-clicky.svg" alt="Force curve chart for a clicky switch: a sharp bump followed by a drop and an audible click" width="280" height="260" loading="lazy">
+          <h3>Clicky</h3>
+          <p>A tactile bump plus a sharp click sound. Satisfying for typists, but loud in shared rooms and on voice calls.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Compare popular switches</h2>
+      <p>Filter by family and tap the star to save switches you want to try. Your favorites stay saved on this device.</p>
+      <div class="filters" role="group" aria-label="Filter switches by type">
+        <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-button" type="button" data-filter="linear" aria-pressed="false">Linear</button>
+        <button class="filter-button" type="button" data-filter="tactile" aria-pressed="false">Tactile</button>
+        <button class="filter-button" type="button" data-filter="clicky" aria-pressed="false">Clicky</button>
+        <button class="filter-button" type="button" data-filter="favorites" aria-pressed="false">My favorites</button>
+      </div>
+      <p id="switch-count" aria-live="polite"></p>
+      <div class="grid three" id="switch-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Keyboard layouts</h2>
+      <p>Layout size is just as important as the switch. Smaller boards save desk space and give your mouse more room, but you give up keys that you might use every day.</p>
+      <img src="images/layouts.svg" alt="Diagram comparing the widths of full-size, TKL, 65 percent, and 60 percent keyboard layouts" width="800" height="420" loading="lazy">
+      <div class="table-wrap">
+        <table>
+          <caption class="hint">Common layouts from largest to smallest</caption>
+          <thead>
+            <tr><th scope="col">Layout</th><th scope="col">Keys (approx.)</th><th scope="col">Best for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Full-size (100%)</td><td>104</td><td>Spreadsheets and data entry that need a number pad</td></tr>
+            <tr><td>Tenkeyless (TKL, 80%)</td><td>87</td><td>Gamers who want more mouse room but keep the function row</td></tr>
+            <tr><td>65%</td><td>68</td><td>Compact desks while still keeping dedicated arrow keys</td></tr>
+            <tr><td>60%</td><td>61</td><td>Travel and minimal setups; arrows move to a function layer</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> KeyCraft Lab | Abraham | Monterrey, NL, México</p>
+    <p><a href="references.html">References</a> | <a href="siteplan.html">Site Plan</a></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/switches.js"></script>
+</body>
+</html>

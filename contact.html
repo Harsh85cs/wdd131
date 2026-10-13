@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share a Build | KeyCraft Lab</title>
+  <meta name="description" content="Share your keyboard or PC build with KeyCraft Lab or request a new maintenance guide.">
+  <meta name="author" content="Abraham">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="40" height="40">
+        KeyCraft Lab
+      </a>
+      <button id="menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav"></button>
+      <ul class="navigation" id="primary-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="switches.html">Switches</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="contact.html" class="active" aria-current="page">Share a Build</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-intro">
+      <h1>Share a Build</h1>
+      <p class="lead">Tell us about your keyboard or PC, or request a guide you would like to see next. Fields marked with * are required.</p>
+    </section>
+
+    <form class="build-form panel" action="thankyou.html" method="get">
+      <label>Name *
+        <input type="text" name="name" autocomplete="name" required minlength="2">
+      </label>
+
+      <label>Email *
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+
+      <label>Reason for contacting *
+        <select name="reason" required>
+          <option value="" disabled selected>Select one...</option>
+          <option value="Share my build">Share my build</option>
+          <option value="Request a guide">Request a guide</option>
+          <option value="Ask a question">Ask a question</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Keyboard layout</legend>
+        <label class="option"><input type="radio" name="layout" value="Full-size"> Full-size (100%)</label>
+        <label class="option"><input type="radio" name="layout" value="TKL"> Tenkeyless (80%)</label>
+        <label class="option"><input type="radio" name="layout" value="65%"> 65%</label>
+        <label class="option"><input type="radio" name="layout" value="60%"> 60%</label>
+        <label class="option"><input type="radio" name="layout" value="Not sure" checked> Not sure</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Switch types you use or want to try</legend>
+        <label class="option"><input type="checkbox" name="switches" value="Linear"> Linear</label>
+        <label class="option"><input type="checkbox" name="switches" value="Tactile"> Tactile</label>
+        <label class="option"><input type="checkbox" name="switches" value="Clicky"> Clicky</label>
+      </fieldset>
+
+      <label>Your message
+        <textarea name="message" rows="5" maxlength="600" placeholder="Describe your build or the guide you need"></textarea>
+      </label>
+      <p class="hint">Please keep your message under 600 characters.</p>
+
+      <button class="button" type="submit">Send</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> KeyCraft Lab | Abraham | Monterrey, NL, México</p>
+    <p><a href="references.html">References</a> | <a href="siteplan.html">Site Plan</a></p>
+    <p id="lastModified"></p>
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
