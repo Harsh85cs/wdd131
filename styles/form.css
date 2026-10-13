@@ -8,6 +8,13 @@
   --accent: #c47f00;
   --line: #cbd2d9;
   --star-off: #9aa5b1;
+  --white: #ffffff;
+  --header-req: #ffd27a;
+  --error: #b42318;
+  --footer-text: #e4e7eb;
+  --shadow: #00000014;
+  --focus: #0b4f6c59;
+  --focus-strong: #0b4f6c73;
   --radius: 10px;
   --heading: "Space Grotesk", system-ui, sans-serif;
   --body: "Inter", system-ui, sans-serif;
@@ -29,7 +36,7 @@ body {
 
 header {
   background: var(--brand);
-  color: #fff;
+  color: var(--white);
   text-align: center;
   padding: 2rem 1rem 1.5rem;
 }
@@ -41,7 +48,7 @@ header h1 {
 }
 
 header p { margin: 0; }
-header .req { color: #ffd27a; }
+header .req { color: var(--header-req); }
 
 main {
   flex: 1;
@@ -54,7 +61,7 @@ main {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+  box-shadow: 0 4px 18px var(--shadow);
   border-top: 6px solid var(--accent);
 }
 
@@ -79,7 +86,7 @@ legend {
 
 legend { padding: 0 .35rem; }
 
-.req { color: #b42318; }
+.req { color: var(--error); }
 .hint { font-weight: 400; color: var(--muted); font-size: .9rem; }
 
 select,
@@ -92,7 +99,7 @@ textarea {
   padding: .65rem .75rem;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fff;
+  background: var(--white);
 }
 
 textarea { resize: vertical; }
@@ -100,7 +107,7 @@ textarea { resize: vertical; }
 select:focus,
 input:focus-visible,
 textarea:focus {
-  outline: 3px solid rgba(11, 79, 108, .35);
+  outline: 3px solid var(--focus);
   outline-offset: 1px;
   border-color: var(--brand);
 }
@@ -136,7 +143,7 @@ textarea:focus {
 .stars label:hover { transform: scale(1.15); }
 
 .stars input:focus-visible + label {
-  outline: 3px solid rgba(11, 79, 108, .45);
+  outline: 3px solid var(--focus-strong);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -169,7 +176,7 @@ textarea:focus {
   font: 600 1.05rem var(--body);
   text-align: center;
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   background: var(--brand);
   border: none;
   border-radius: 8px;
@@ -208,7 +215,7 @@ textarea:focus {
 /* Footer */
 footer {
   background: var(--ink);
-  color: #e4e7eb;
+  color: var(--footer-text);
   text-align: center;
   padding: 1rem;
   font-size: .9rem;
